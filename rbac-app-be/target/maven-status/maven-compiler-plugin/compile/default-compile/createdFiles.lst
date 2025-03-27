@@ -1,0 +1,5 @@
+com\nexgenus\rbac_app\entity\Permission.class
+com\nexgenus\rbac_app\entity\Role.class
+com\nexgenus\rbac_app\entity\User.class
+com\nexgenus\rbac_app\RbacAppApplication.class
+com\nexgenus\rbac_app\repository\UserRepository.class
