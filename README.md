@@ -27,10 +27,10 @@ This application covers:
 
 ### Setup and Running
 
-Clone and navigate to backend:
+Clone and navigate to rbac-app-be:
 
 ```bash
-cd backend
+cd rbac-app-be
 ```
 
 Build and run the app:
@@ -43,20 +43,20 @@ java -jar target/your-app.jar
 Docker:
 
 ```bash
-docker build -t my-spring-app -f Dockerfile.backend .
+docker build -t my-spring-app -f Dockerfile.rbac-app-be .
 docker run -p 8080:8080 my-spring-app
 ```
 
 ### API Endpoints
 
-| Method | Endpoint | Description | Roles |
-|--------|----------|-------------|-------|
-| POST | `/api/v1/auth/register` | Register new user | Public |
-| POST | `/api/v1/auth/login` | User login and token generation | Public |
-| POST | `/api/v1/auth/logout` | Logout | Authenticated Users |
-| GET | `/api/v1/user` | User-specific content | USER |
-| GET | `/api/v1/admin` | Admin-specific content | ADMIN |
-| GET | `/api/v1/common` | Common content | Authenticated Users |
+| Method | Endpoint                | Description                     | Roles               |
+| ------ | ----------------------- | ------------------------------- | ------------------- |
+| POST   | `/api/v1/auth/register` | Register new user               | Public              |
+| POST   | `/api/v1/auth/login`    | User login and token generation | Public              |
+| POST   | `/api/v1/auth/logout`   | Logout                          | Authenticated Users |
+| GET    | `/api/v1/user`          | User-specific content           | USER                |
+| GET    | `/api/v1/admin`         | Admin-specific content          | ADMIN               |
+| GET    | `/api/v1/common`        | Common content                  | Authenticated Users |
 
 ## Frontend (Next.js)
 
@@ -76,10 +76,10 @@ docker run -p 8080:8080 my-spring-app
 
 ### Setup and Running
 
-Navigate to frontend:
+Navigate to rbac-app-fe:
 
 ```bash
-cd frontend
+cd rbac-app-fe
 ```
 
 Install dependencies and run locally:
@@ -99,7 +99,7 @@ npm start
 Docker:
 
 ```bash
-docker build -t my-next-app -f Dockerfile.frontend .
+docker build -t my-next-app -f Dockerfile.rbac-app-fe .
 docker run -p 3000:3000 my-next-app
 ```
 
@@ -119,6 +119,7 @@ docker run -p 3000:3000 my-next-app
 ## Technologies Used
 
 ### Backend
+
 - Spring Boot
 - Spring Security
 - JWT
@@ -127,6 +128,7 @@ docker run -p 3000:3000 my-next-app
 - Docker
 
 ### Frontend
+
 - Next.js 13+ (App Router)
 - React
 - Redux Toolkit
